@@ -1,4 +1,4 @@
-﻿namespace kata_solutions.BitCounting;
+﻿namespace BitCounting;
 
 public static class BitCountingKata
 {

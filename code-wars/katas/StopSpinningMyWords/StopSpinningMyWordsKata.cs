@@ -1,4 +1,4 @@
-﻿namespace kata_solutions.StopSpinningMyWords;
+﻿namespace StopSpinningMyWords;
 
 public static class StopSpinningMyWordsKata
 {

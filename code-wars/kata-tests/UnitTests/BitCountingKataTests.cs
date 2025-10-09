@@ -1,7 +1,7 @@
-﻿using FluentAssertions;
-using kata_solutions.BitCounting;
+﻿using BitCounting;
+using FluentAssertions;
 
-namespace stop_gninnips_my_sdrow_tests;
+namespace UnitTests;
 
 public class BitCountingKataTests
 {
