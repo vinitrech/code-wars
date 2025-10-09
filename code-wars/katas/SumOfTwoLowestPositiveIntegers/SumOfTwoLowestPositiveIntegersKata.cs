@@ -1,4 +1,4 @@
-﻿namespace SumOfTwoLowestPositiveIntegers;
+﻿namespace katas.SumOfTwoLowestPositiveIntegers;
 
 public static class SumOfTwoLowestPositiveIntegersKata
 {

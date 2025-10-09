@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
-using StopSpinningMyWords;
+using katas.StopSpinningMyWords;
 
-namespace UnitTests;
+namespace kata.tests.UnitTests;
 
 public class StopSpinningMyWordsKataTests
 {

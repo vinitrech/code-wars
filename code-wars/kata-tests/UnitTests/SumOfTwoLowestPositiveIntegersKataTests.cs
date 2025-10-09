@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
-using SumOfTwoLowestPositiveIntegers;
+using katas.SumOfTwoLowestPositiveIntegers;
 
-namespace UnitTests;
+namespace kata.tests.UnitTests;
 
 public class SumOfTwoLowestPositiveIntegersKataTests
 {

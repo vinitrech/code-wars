@@ -1,7 +1,7 @@
-﻿using BitCounting;
-using FluentAssertions;
+﻿using FluentAssertions;
+using katas.BitCounting;
 
-namespace UnitTests;
+namespace kata.tests.UnitTests;
 
 public class BitCountingKataTests
 {
