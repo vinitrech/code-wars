@@ -31,6 +31,6 @@ public class ArrayDiffKata
     {
         var hashSetB = new HashSet<int>(b);
 
-        return [.. new HashSet<int>(a).Where(n => !b.Contains(n))];
+        return [.. a.Where(x => !hashSetB.Contains(x))];
     }
 }
