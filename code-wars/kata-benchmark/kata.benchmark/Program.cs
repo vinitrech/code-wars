@@ -4,8 +4,8 @@ namespace kata.benchmark;
 
 public class Program
 {
-    public static void Main(string[] args)
+    public static void Main()
     {
-        BenchmarkRunner.Run<ArrayDiffKataBenchmarks>();
+        BenchmarkRunner.Run<DetectPangramKataBenchmarks>();
     }
 }
