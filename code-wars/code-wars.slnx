@@ -2,6 +2,7 @@
   <Folder Name="/Solution Items/">
     <File Path="README.md" />
   </Folder>
+  <Project Path="kata-benchmark/kata.benchmark/kata.benchmark.csproj" Id="d56be779-c6e7-4ff9-a9e7-c9415afe59f9" />
   <Project Path="kata-tests/kata.tests.csproj" />
   <Project Path="katas/katas.csproj" />
 </Solution>
