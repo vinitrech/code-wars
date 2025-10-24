@@ -1,29 +1,43 @@
-﻿namespace katas.DecodeTheMorseCodeAdvanced;
+﻿using System.Text.RegularExpressions;
 
-//INCOMPLETE - NOT WORKING PROPERLY
+namespace katas.DecodeTheMorseCodeAdvanced;
+
 public class DecodeTheMorseCodeAdvancedKata
 {
-    public static string DecodeBits(string bits) =>
-        string.Join("   ", bits.Split("00000000")
-                .Select(part =>
-                {
-                    var translatedCharacters = part.Split("0000")
-                        .Where(part => !string.IsNullOrWhiteSpace(part))
-                        .Select(word =>
-                        {
-                            return string.Join("", word.Split("00")
-                                .Where(character => !string.IsNullOrWhiteSpace(character))
-                                .Select(character => character switch
-                                {
-                                    "11" => ".",
-                                    "111111" => "-",
-                                    _ => ""
-                                }));
-                        });
+    public static string DecodeBits(string bits)
+    {
+        var trimmedBits = bits.Trim('0');
 
-                    return string.Join(" ", translatedCharacters);
-                })
-            );
+        if (string.IsNullOrWhiteSpace(trimmedBits))
+            return string.Empty;
+
+        var groups = Regex.Matches(trimmedBits, "(0+|1+)", options: RegexOptions.Compiled, matchTimeout: TimeSpan.FromMilliseconds(500)).Select(match => match.Value).ToList();
+        var timeUnit = groups.Min(group => group.Length);
+        var normalizedBits = groups.Select(group => new { Bit = group[0], Units = group.Length / timeUnit }).ToList();
+        var morse = "";
+
+        for (var index = 0; index < normalizedBits.Count; index++)
+        {
+            var group = normalizedBits[index];
+
+            if (group.Bit == '1')
+            {
+                if (group.Units == 1)
+                    morse += ".";
+                else if (group.Units >= 3)
+                    morse += "-";
+            }
+            else
+            {
+                if (group.Units == 3)
+                    morse += " ";
+                else if (group.Units == 7)
+                    morse += "   ";
+            }
+        }
+
+        return morse;
+    }
 
     public static string DecodeMorse(string morseCode)
     {
