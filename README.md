@@ -1,1 +1,1 @@
-This solution contains CodeWars Kata solutions. Each project is a different Kata. All Kata solutions are implemented in C#, strictly with LINQ.
+This solution contains CodeWars Kata solutions. Each Kata has its own folder with a README containing the problem description. There are unit tests for every Kata.
