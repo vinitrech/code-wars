@@ -36,7 +36,7 @@ public class LandPerimeterKata
 
     private static int SumRow(int rowIndex, string[] map) =>
         Enumerable.Range(0, map[rowIndex].Length)
-            .Sum((int columnIndex) =>
+            .Sum(columnIndex =>
             {
                 var element = map[rowIndex][columnIndex];
                 var weight = 4;
